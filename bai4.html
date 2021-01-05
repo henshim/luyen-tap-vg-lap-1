@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let fib = 0;
+    let total;
+    while (fib < 20) {
+        total = b + a;
+        a = b;
+        b = total;
+        fib++;
+        if (total % 5 == 0) {
+            document.write('số ' + total + ' trong dãy fibonacci chia hết cho 5')
+            break;
+        }
+    }
+</script>
+</body>
+</html>

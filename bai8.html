@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doan()">Chơi</button>
+<script>
+
+    function doan() {
+        let a = +prompt('Nhập khoảng số bạn muốn đoán: ');
+        let n = Math.floor(Math.random() * a);
+        let count=0;
+        do {
+            let b = +prompt('Nhập số bạn trong khoảng bạn vừa nhập');
+            count++;
+            if (b==n){
+                alert('correct');
+            }else {
+                if (count == 5){
+                    alert('game over')
+                }else {
+                    alert('try again, bạn còn '+(5-count))
+                }
+            }
+        }while (count<5)
+    }
+</script>
+</body>
+</html>
